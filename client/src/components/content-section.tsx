@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { widths, colors } from '../styles';
 
@@ -6,7 +6,10 @@ import { widths, colors } from '../styles';
  * Content Section component renders content (mainly text/mdown based)
  * for course detail and lesson detail
  */
-const ContentSection = ({ children }) => {
+type Props = {
+  children?: React.ReactNode
+}
+const ContentSection: React.FC<Props> = ({ children }) => {
   return <ContentDiv>{children}</ContentDiv>;
 };
 
