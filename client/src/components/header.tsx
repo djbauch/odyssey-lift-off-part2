@@ -1,8 +1,8 @@
-import React from 'react';
-import { colors, widths } from '../styles';
-import styled from '@emotion/styled';
-import { Link } from '@reach/router';
-import logo from '../assets/space_cat_logo.png';
+import * as React from 'react'
+import { colors, widths } from '../styles'
+import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
+import logo from '../assets/space_cat_logo.png'
 
 /**
  * Header renders the top navigation
@@ -44,7 +44,7 @@ const HeaderBar = styled.div({
   padding: '5px 30px',
   minHeight: 80,
   backgroundColor: 'white',
-});
+})
 
 const Container = styled.div({
   width: `${widths.regularPageWidth}px`,

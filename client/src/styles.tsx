@@ -1,7 +1,7 @@
 import React from 'react';
 import '@apollo/space-kit/reset.css';
 import { colors as SKColors } from '@apollo/space-kit/colors';
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 
 const breakpoints = [480, 768, 992, 1200];
 export const mq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
@@ -17,7 +17,6 @@ export const colors = {
   secondary: SKColors.teal.base,
   accent: SKColors.pink.base,
   background: SKColors.silver.light,
-  grey: SKColors.silver.dark,
   text: SKColors.black.base,
   textSecondary: SKColors.grey.dark,
   ...SKColors,
@@ -26,10 +25,11 @@ export const colors = {
 const GlobalStyles = () => (
   <Global
     styles={{
-      [['html', 'body']]: {
+      'html': {
         height: '100%',
       },
       body: {
+        height: '100%',
         margin: 0,
         padding: 0,
         fontFamily: "'Source Sans Pro', sans-serif",
@@ -45,21 +45,25 @@ const GlobalStyles = () => (
       '*': {
         boxSizing: 'border-box',
       },
-      [['h1', 'h2', 'h3', 'h4', 'h5', 'h6']]: {
+      h1: {
         margin: 0,
         fontWeight: 600,
-      },
-      h1: {
         fontSize: 40,
         lineHeight: 1,
       },
       h2: {
+        margin: 0,
+        fontWeight: 600,
         fontSize: 36,
       },
       h3: {
+        margin: 0,
+        fontWeight: 600,
         fontSize: 30,
       },
       h5: {
+        margin: 0,
+        fontWeight: 600,
         fontSize: 16,
         textTransform: 'uppercase',
         letterSpacing: 4,
